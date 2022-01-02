@@ -40,7 +40,7 @@ class SubmissionBase:
         # Print the grading table
         print('%43s | %9s | %-s' % ('Part Name', 'Score', 'Feedback'))
         print('%43s | %9s | %-s' % ('---------', '-----', '--------'))
-        for index, part in enumerate(parts):
+        for index, part in enumerate(parts, start=1):
             part_feedback = response['linked']['onDemandProgrammingScriptEvaluations.v1'][0]['parts'][str(part)][
                 'feedback']
             part_evaluation = response['linked']['onDemandProgrammingScriptEvaluations.v1'][0]['parts'][str(part)]
